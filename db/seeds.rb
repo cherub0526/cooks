@@ -5,3 +5,13 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+50.times do |x|
+  Food.create!(
+    :title => Faker::Name.name,
+    :category_id => Faker::Number.digit,
+    :price => Faker::Commerce.price,
+    :desctiprion => Faker::Lorem.paragraph(20),
+    :images => Faker::Avatar.image("my-own-slug", "70x70", "jpg")
+  )
+end
