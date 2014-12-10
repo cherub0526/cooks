@@ -14,6 +14,9 @@
  *= require ./css/layout.css
  *= require ./css/menu.css
  *= require ./css/font-awesome.css
+ *= require ./css/Isotope.css
+ *= require ./css/owl.carousel.css
+ *= require ./css/prettyPhoto.css
  *= require ./css/style.css
  *= require ./css/responsive.css
  */

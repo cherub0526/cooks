@@ -55,6 +55,7 @@ Rails.application.routes.draw do
   #   end
   root :to => 'cooks#index'
   get '/' => 'cooks#index'
+  get 'foodmenu' => 'cooks#foodmenu'
   get 'cpt' => 'cooks#cpt'
   get 'tabular' => 'cooks#tabular'
   get 'daily' => 'cooks#daily'

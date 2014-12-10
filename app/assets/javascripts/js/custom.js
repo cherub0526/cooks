@@ -47,7 +47,7 @@ $('.item-container').hover(function(){
     $(this).find('a.dragable-slider, a.link_to_video').css({'left':'-50px','display':'block'}).stop().animate({'left':'45%', opacity:1},600);
 
   $(this).find('a.link_to_post').css({'right':'-50px','display':'block'}).stop().animate({'right':'30%',opacity:1},600);
- 
+
 },function(){
   $(this).find('img').fadeTo(500,1);
   $(this).find('a.link_to_image, a.link_to_video').css({'left':'50','display':'block'}).stop().animate({'left':'-30%',opacity:0},600);
@@ -55,7 +55,7 @@ $('.item-container').hover(function(){
   $(this).find('a.link_to_post').css({'right':'50px','display':'block'}).stop().animate({'right':'-30%',opacity:0},600);
 });
 
-	
+
 // Responsive Menu Nav
   $("<select />").appendTo(".menu");
     // Create default option "Go to..."
@@ -82,15 +82,15 @@ $('.item-container').hover(function(){
   }
   });
 
-  
-  //make responsive dropdown menu actually work     
+
+  //make responsive dropdown menu actually work
   $(".menu select").change(function() {
   window.location = $(this).find("option:selected").val();
   });
 
   if($('body')[0].scrollHeight > $(window).height()){
-        $('footer').addClass("scrollbar"); 
+        $('footer').addClass("scrollbar");
     }else{
       $('footer').removeClass("scrollbar");
     }
-});     
+});

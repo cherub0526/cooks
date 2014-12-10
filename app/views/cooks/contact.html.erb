@@ -1,1 +1,63 @@
 <%= render('common/nav') %>
+   <section  id="container-fluid">
+  <div  id="container" class="contact">
+   <div  class="two-third">
+   <div class="google_map">
+   <iframe src="http://maps.google.com.tw/maps?f=q&hl=zh-TW&geocode=&q=台北市士林區忠義街84號&z=15&output=embed" height="450">
+   </iframe>
+ </div>
+ <div class="contact_form">
+  <form id="contact-form" name="contact-form" action="sendEmail.php" method="post">
+    <div id="main">
+      <div id="contact_response">
+        <div class="success">    </div>
+      </div>
+      <div class="one-third"><input type="text" placeholder="名稱" size="23" id="name" name="name"></div>
+      <div class="one-third"><input type="text" size="23" id="email" placeholder="Email" name="email"></div>
+      <div class="one-third-last"><input type="text" size="23" id="subject" placeholder="標題" name="subject"></div>
+      <div class="fullwidth">
+        <textarea placeholder="您的訊息" rows="4" cols="30" id="message" name="message"></textarea>
+      </div>
+      <div class="clear"></div>
+      <div>
+        <input type="submit" value="確 認" id="contact_submit" name="contact_submit" class="readmore readmore-1 readmore-1a">
+        <input type="reset" value="清 除" id="reset" name="reset" class="readmore readmore-1 readmore-1a">
+      </div>
+    </div>
+  </form>
+</div>
+</div>
+
+<aside class="one-third-last">
+<div class="sidebar">
+    <div class="address"><i class="fa fa-home"> </i></div>
+    <div class="description">
+        <a href="#"><h3>地 址</h3></a>
+        <p>台北市士林區忠義街84號(天母SOGO)</p>
+    </div>
+</div>
+<div class="sidebar">
+    <div class="address"><i class="fa fa-phone"> </i></div>
+    <div class="description">
+        <a href="#"><h3>聯 絡 我 們</h3></a>
+        <p>(02)2831-2017<br />
+              營業時間：週一至週日 11:00~14:00 17:00~21:00
+        </p>
+        <p>
+          最晚預約或點餐時間：14:00、21:00
+        </p>
+    </div>
+</div>
+
+<div class="sidebar">
+    <div class="address"><i class="fa fa-envelope"> </i></div>
+    <div class="description">
+        <a href="#"><h3>Email</h3></a>
+        <p>Yourdomain@gmail.com<br />
+        </p>
+    </div>
+</div>
+<iframe height="250" src="http://www.youtube.com/embed/LWyefb8n5g4?rel=0&amp;showinfo=0&amp;controls=0&amp;HD=1" ></iframe>
+</aside>
+</div>
+ </section>

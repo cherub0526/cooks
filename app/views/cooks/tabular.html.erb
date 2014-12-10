@@ -1,1 +1,29 @@
 <%= render('common/nav') %>
+
+<!--Container Start-->
+<section id="container-fluid">
+  <section id="container" class="tabularmenu">
+
+   <% @categories.each_with_index do |category,x| %>
+   <div class="one-third<%= '-last' if x % 3 == 2 %>">
+     <h1><%= category.title %></h1>
+     <div class="foodmenu menubg<%= menu_color(x) %>">
+      <ul>
+        <% @foods.each do |food| %>
+          <% if food.category_id == category.id %>
+          <li>
+            <span><%= food.title %></span>
+            <span>$<%= food.price %></span>
+          </li>
+          <% end %>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+  <%= raw('<div class="clear"></div>') if x % 3 == 2 %>
+  <% end %>
+
+  </section>
+</section>
+<!--Container End-->
+<%= render('common/footer')%>

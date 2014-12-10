@@ -12,15 +12,24 @@
 </section>
 <nav class="menu nav_wrapper" id="myslidemenu">
     <ul class="menu" id="jqueryslidemenu">
-        <li class="current"><a href="/"><i class="fa fa-home"></i>首 頁</a></li>
-        <li><a href="javascript:;"><i class="fa fa-cutlery"></i>美 食 菜 單</a>
-          <ul class="sub-menu">
-              <li><a href="cpt">美 食 菜 單</a></li>
-                <li><a href="tabular">表 格 菜 單</a></li>
-            </ul>
+        <li <%= _li(controller.action_name,'index') %>>
+            <a href="/"><i class="fa fa-home"></i>首 頁</a>
         </li>
-        <li><a href="daily"><i class="fa fa-thumbs-o-up"></i>今 日 推 薦</a></li>
-        <li><a href="new"><i class="fa fa-comments"></i>最 新 消 息</a></li>
-        <li><a href="contact"><i class="fa fa-phone-square"></i>聯 絡 我 們</a></li>
-    </ul>
+        <li <%= _li(controller.action_name,'foodmenu') %>>
+            <%= link_to raw('<i class="fa fa-cutlery"></i>美 食 菜 單'), :controller => 'cooks', :action => 'foodmenu' %>
+            <ul class="sub-menu">
+                <li><%= link_to '美 食 菜 單', :controller => 'cooks', :action => 'cpt' %></li>
+                <li><%= link_to '表 格 菜 單', :controller => 'cooks', :action => 'tabular' %></li>
+            </ul>
+            </li>
+            <li <%= _li(controller.action_name,'daily') %>>
+                <a href="daily"><i class="fa fa-thumbs-o-up"></i>今 日 推 薦</a>
+            </li>
+            <li <%= _li(controller.action_name,'new') %>>
+                <a href="new"><i class="fa fa-comments"></i>最 新 消 息</a>
+            </li>
+            <li <%= _li(controller.action_name,'contact') %>>
+                <a href="contact"><i class="fa fa-phone-square"></i>聯 絡 我 們</a>
+            </li>
+        </ul>
 </nav>

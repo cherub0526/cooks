@@ -12,6 +12,13 @@
     :category_id => Faker::Number.digit,
     :price => Faker::Commerce.price,
     :desctiprion => Faker::Lorem.paragraph(20),
-    :images => Faker::Avatar.image("my-own-slug", "70x70", "jpg")
+    :images => Faker::Avatar.image("my-own-slug", "500x400", "jpg")
+  )
+end
+
+categories = ['Starters','Pasta','Salads','Vegetarian','Meat','Beverages']
+categories.each do |category|
+  Category.create!(
+    :title => category
   )
 end

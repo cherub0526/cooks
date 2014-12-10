@@ -1,0 +1,33 @@
+<%= render('common/nav') %>
+
+<section  id="container-fluid">
+ <section id="container">
+   <div class="filter_portfolio">
+    <div class="filter" id="filter">
+      <ul>
+        <li class="all"><a class="active" href="#" data-category="all">All</a></li>
+        <% @categories.each do |category| %>
+        <li class="category<%= category.id %>"><a  href="" data-category="category<%= category.id %>"><%= category.title %></a></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+  <%= @categories %>
+  <ul class="portfolio_items isotope-container clearfix portfolio-page-template gallery">
+    <% @foods.each do |food| %>
+    <li class="isotope-item all category<%= food.category_id %>">
+      <div class="item-container">
+        <img src="<%= food.images %>" alt="foodmenuicon1" />
+        <span class="item_price">$<%= food.price %></span>
+        <a class="link_to_image" data-gal="prettyPhoto[gallery2]" href="<%= food.images %>" > </a>
+        <a class="link_to_post" href="portfolio-post-page.html" target="_self">  </a>
+      </div>
+      <div class="portfolio_post_content">
+        <h4><%= food.title %></h4>
+      </div>
+    </li>
+    <% end %>
+  </ul>
+</section>
+</section>
+<%= render('common/footer')%>

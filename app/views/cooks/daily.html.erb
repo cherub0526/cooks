@@ -1,1 +1,76 @@
 <%= render('common/nav') %>
+<!--Container Start-->
+<section  id="container-fluid">
+
+<section id="container" class="daily-special">
+    <h2>Today's Special Items</h2>
+
+ <!--draggable silder start..-->
+<div id="owl-demo" class="owl-carousel">
+    <% @foods.each do |food|%>
+    <div class="item">
+        <div class="item-container">
+            <img src="<%= food.images %>" alt="Touch">
+            <span class="item_price">$<%= food.price %></span>
+            <a class="dragable-slider" data-gal="prettyPhoto[gallery2]" href="<%= food.images %>"></a>
+        </div>
+        <div class="slider_post_content"><h4><%= food.title %></h4></div>
+    </div>
+    <% end %>
+</div>
+ <!--draggable silder end..-->
+
+ <!--contact form start..-->
+ <div  class="one-half">
+       <h2>預 約</h2>
+       <form id="contact-form" name="contact-form" action="reservation.php" method="post">
+
+        <div id="main">
+          <div id="response">
+          </div>
+          <p class="one-half"><input type="text" placeholder="姓 名" size="23" id="res_name" name="res_name"></p>
+          <p class="one-half-last"><input type="text" size="23" id="res_email" placeholder="Email" name="res_email"></p>
+          <p class="one-third"> <input type="text" placeholder="聯絡電話" size="23" id="res_phone" name="res_phone"></p>
+          <p class="one-third"><input type="text" placeholder="人 數" size="23" id="res_persons" name="res_persons"></p>
+          <p class="one-third-last"><input type="text" value="" placeholder="Reservation On" id="res_date" name="res_date" class="res_date hasDatepicker"></p>
+          <p class="one-third"><input type="text" size="23" id="res_time" placeholder="預約時間" name="res_time"></p>
+          <p class="two-third-last"><input type="text" size="23" id="res_subject" placeholder="標 題" name="res_subject"></p>
+          <p class="fullwidth"><textarea placeholder="您的訊息" rows="4" cols="30" id="res_message" name="res_message"></textarea></p>
+          <p><input type="submit" value="確認" id="submit" name="submit" class="readmore readmore-1 readmore-1a">
+            <input type="reset" value="清除" id="reset" name="reset" class="readmore readmore-1 readmore-1a">
+          </p>
+        </div>
+      </form>
+ </div>
+ <!--contact form end..-->
+
+ <!--sidebar start-->
+<aside class="one-half-last">
+    <h2>WHAT OUR CLIENT SAYS...</h2>
+<div class="testimonial_wrapper testmonial" >
+    <img src="images/team01.jpg" alt="Our Client" class="alignleft thumb-img" />
+    <div class="description">
+        <p>"Facilisis lacus donec vitae quis tincidunt velit. Phasellus semper leo non mauris fermentum fermentum" </p>
+        <h4>-Anna Maria</h4>
+    </div>
+</div>
+<div class="testimonial_wrapper testmonial">
+    <img src="images/team02.jpg" alt="Our Client" class="alignleft thumb-img" />
+    <div class="description">
+        <p>"Donec lacus facilisis vitae quis tincidunt velit. Phasellus fermentum semper leo non mauris fermentum mauris" </p>
+        <h4>-Brad Moller</h4>
+    </div>
+</div>
+<div class="testimonial_wrapper testmonial">
+    <img src="images/team03.jpg" alt="Our Client" class="alignleft thumb-img" />
+    <div class="description">
+        <p>"Semper facilisis lacus donec vitae quis tincidunt velit. Phasellus leo non mauris fermentum phasellus" </p>
+        <h4>-Jeena Woven</h4>
+    </div>
+</div>
+</aside>
+<!--sidebar End-->
+
+</section>
+
+</section>
